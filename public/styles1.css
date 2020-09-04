@@ -1,0 +1,26 @@
+.weeklyNewsCard{
+    display:flex;
+    flex-direction:column;
+    width: 300px;
+    box-sizing: border-box;
+}
+.card-image{
+    width: 300px;
+    height: 300px;
+
+}
+.card-image img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.card-text{
+    width: 100%;
+    font-size: 25px;
+    padding:10px 10px 30px 10px;
+}
+.footer{
+    padding:20px;
+    font-size: 10px;
+    color: #333;
+}
