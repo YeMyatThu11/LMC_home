@@ -1,0 +1,47 @@
+.wrapper{
+            
+    display:flex;
+    flex-wrap:wrap; 
+  }
+  .weeklyNewsCard{
+    margin:0 auto;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    background:#fafafa;
+    margin:20;
+    display:flex;
+    flex-direction:column;
+    width: 80%;
+    box-sizing: border-box;
+    position:relative;
+    margin-bottom:50px;
+  }
+  .card-image{
+    width: 100%;
+    height: 400px;
+  
+  }
+  .card-image img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .card-text{
+    box-sizing:border-box;
+    width:100%;
+    font-size: 18px;
+    padding:10px 30px 100px 30px;
+  }
+  .footer{
+    position:absolute;
+    bottom:2%;
+    padding:20px;
+    font-size: 10px;
+    color: #333;
+  }
+  @media only screen and (max-width: 600px) {
+    .card-text{
+        
+        font-size: 11px;
+        padding:10px 10px 100px 10px;
+      }
+  }

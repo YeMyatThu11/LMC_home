@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/','ApiController@callApi');
+Route::get('/news','ApiController@callApi')->name('news');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

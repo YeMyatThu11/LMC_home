@@ -11,6 +11,6 @@ class ApiController extends Controller
     public function callApi(){
         $api=new Api;
         $api_data=$api->getNews();
-        return view('welcome')->with('weeklyNews',$api_data);
+        return view('news')->with('weeklyNews',$api_data);
     }
 }
