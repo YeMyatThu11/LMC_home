@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/news','ApiController@callApi')->name('news');
+Route::get('/','ApiController@callApi')->name('news');
 
 Auth::routes();
 

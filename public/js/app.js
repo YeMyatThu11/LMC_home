@@ -37331,8 +37331,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\laravel\LMC_home\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\laravel\LMC_home\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\LMC\Laravel_Myanmar_Community\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\LMC\Laravel_Myanmar_Community\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

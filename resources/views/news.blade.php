@@ -13,11 +13,25 @@
                     <img src="{{$weeklyNew['urlToImage']}}" alt=""> 
                     @endif
                 </div>
+                <div class="card-title">
+                    {{$weeklyNew['title']}}
+                </div>
                 <div class="card-text">
-                    {{$weeklyNew['content']}}
+                  
+                    @if( strpos($weeklyNew['content'],'…')!==false)
+                       
+                            {{substr($weeklyNew['content'], 0, strpos($weeklyNew['content'], '…'))}} <span><a href="{{$weeklyNew['url']}}">See more...</a></span>
+                    @else
+                        @if($weeklyNew['content']==null)
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis accusamus ab vitae voluptates quisquam corrupti error dolores, voluptatibus odio, beatae architecto dolor, cupiditate tempora veniam ex natus sit facere ipsam.<span><a href="{{$weeklyNew['url']}}">See more...</a></span>
+                        @else
+                            {{$weeklyNew['content']}} <span><a href="{{$weeklyNew['url']}}">See more...</a></span>
+                        @endif
+                    @endif
+                    
                 </div>
                 <div class="footer">
-                    {{$weeklyNew['publishedAt']}}
+                    <div style="padding-top: 5px;">Date: {{ Carbon\Carbon::parse($weeklyNew['publishedAt'])->format('l jS \\of F Y ') }}</div>
                 </div>
             </div>
         @endforeach
