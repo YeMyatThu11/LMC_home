@@ -66,13 +66,19 @@
                                     </form>
                                 </div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('news') }}">Job</a>
-                            </li>
+                           
                         @endguest
                         <li class="nav-item">
                                 <a class="nav-link" href="{{ route('news') }}">News</a>
                         </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ route('jobs.index') }}">Job</a>
+                        </li>
+                        @if(\Request::is('jobs/*') || \Request::is('jobs')  )
+                            <li class="nav-item navStyle">
+                                    <a class="nav-link" href="{{ route('jobs.create') }}">Post a job</a>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>

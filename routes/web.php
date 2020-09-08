@@ -16,3 +16,4 @@ Route::get('/','ApiController@callApi')->name('news');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('jobs', 'JobController');

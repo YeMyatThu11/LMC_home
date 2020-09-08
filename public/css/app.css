@@ -47,6 +47,41 @@
     font-size: 10px;
     color: #333;
   }
+  /* job */
+  body{
+    background-color: #fafafa !important;
+  }
+  .marginTop{
+    margin-top: 60px;
+  }
+  .job-row{
+    padding: 25px;
+    border-radius: 10px;
+    border-bottom: 2px solid #eee;
+    
+  }
+  .job-row:hover{
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(0,0,0, 0.2);
+  }
+  .job-row a {
+    text-decoration: none !important;
+    color: #000;
+  }
+  .job-row a:hover{
+    color: #FF2D20 !important;
+  }
+  .titleBold{
+    font-weight: 600;
+  }
+  .navStyle{
+    border-radius: 10px;
+    background: #FF2D20;
+   
+  }
+  .navStyle a{
+    color: #fff !important;
+  }
   @media only screen and (max-width: 600px) {
     .card-text{
         
