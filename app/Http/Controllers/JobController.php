@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Job;
+use Session;
 class JobController extends Controller
 {
     /**
@@ -48,7 +49,15 @@ class JobController extends Controller
     public function show($id)
     {
         
-        $job=Job::where('job-id',$id)->get();
+        $job=Job::where('job_id',$id)->first();
+        
+        $viewed=Session::get('view_job',[]);
+       
+        if(!in_array($job->job_id,$viewed)){
+            $job->where('job_id',$id)->increment('views');   
+            Session::push('view_job',$job->job_id);
+            
+        }
         return view('jobs.show')->with('job',$job);
     }
 

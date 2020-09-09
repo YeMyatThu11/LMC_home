@@ -2,7 +2,7 @@
 
 @section('content')
        
-        <div class="wrapper">
+        <div class="wrapper marginTop">
         @foreach($weeklyNews as $weeklyNew)
         
             <div class="weeklyNewsCard">
