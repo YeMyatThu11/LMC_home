@@ -100,6 +100,15 @@
   .faint-bg{
     background-color: #fefefe;
   }
+  /* spinner */
+  #cover {
+    background: url("{{url('/img/spiner.gif')}}") no-repeat scroll center center #FFF;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+  
   @media only screen and (max-width: 600px) {
     .card-text{
         
@@ -120,3 +129,5 @@
        
       }
   }
+
+  

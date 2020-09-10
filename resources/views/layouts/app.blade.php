@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    @trixassets
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{asset('js/app.js')}}"></script>
 </head>
 <body>
     <div id="app">
@@ -75,8 +77,8 @@
                                 <a class="nav-link" href="{{ route('jobs.index') }}">Job</a>
                         </li>
                         @if(\Request::is('jobs/*') || \Request::is('jobs')  )
-                            <li class="nav-item navStyle">
-                                    <a class="nav-link" href="{{ route('jobs.create') }}">Post a job</a>
+                            <li class="nav-item ">
+                                    <a class="nav-link" href="{{ route('jobs.create') }}">Post Jobs</a>
                             </li>
                         @endif
                     </ul>
@@ -88,5 +90,12 @@
             @yield('content')
         </main>
     </div>
+    
 </body>
+<script>
+    $(window).load(function(){
+        $('#cover').fadeOut(1000);
+        console.log('aa');
+    });
+</script>
 </html>

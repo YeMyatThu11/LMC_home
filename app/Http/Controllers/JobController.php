@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Job;
 use Session;
+use App\Http\Requests\JobValidatePost;
+
 class JobController extends Controller
 {
     /**
@@ -26,7 +28,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        
+        return view('jobs.create');
     }
 
     /**
@@ -35,9 +37,28 @@ class JobController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(JobValidatePost $request)
     {
-        
+       $validated=$request->validated();
+        $requestTrixData=request('job-trixFields');
+       Job::create([
+        'full_description' =>  $requestTrixData['description'],
+        'requirement'=>$requestTrixData['requirement'],
+        'user_id'=>'1',
+        'views'=>'0',
+        'title'=>request('title'),
+        'salary'=>request('salary'),
+        'title'=>request('title'),
+        'category'=>request('category'),
+        'location'=>request('location'),
+        'companyName'=>request('companyName'),
+        'companyWebsite'=>request('companyWebsite'),
+        'companyEmail'=>request('companyEmail'),
+        'companyPhone'=>request('companyPhone'),
+
+    ]);
+    
+    return redirect('jobs');
     }
 
     /**

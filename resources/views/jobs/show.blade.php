@@ -31,20 +31,26 @@
                 <div class="col-md-8 pt-5">
                     <h5>Job Desription</h5>
                     <div class="fontColorfaint">
-                        {{ltrim( str_replace('*','..',$job['full_description']),'.')}}
+                        {!!html_entity_decode($job['full_description'])!!}
                     </div>
                 </div>
                
                 <div class="col-md-8 pt-5 ">
                     <h5>Requirements</h5>
                     <div class="fontColorfaint">
-                        {{$job['requirement']}}
+                        {!!html_entity_decode($job['requirement'])!!}
                     </div>
                 </div>
                 <div class="col-md-8  pt-5">
                     <h5>Office Location</h5>
                     <div class="fontColorfaint">
                         {{$job['location']}}
+                    </div>
+                </div>
+                <div class="col-md-8  pt-5">
+                    <h5>Apply for this job</h5>
+                    <div class="fontColorfaint">
+                        {{$job['companyEmial']}}
                     </div>
                 </div>
             </div>

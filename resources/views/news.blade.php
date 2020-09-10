@@ -16,8 +16,8 @@
                 <div class="card-title">
                     {{$weeklyNew['title']}}
                 </div>
-                <div class="card-text">
-                  
+                <div class="card-text fontColorfaint">
+                    
                     @if( strpos($weeklyNew['content'],'…')!==false)
                        
                             {{substr($weeklyNew['content'], 0, strpos($weeklyNew['content'], '…'))}} <span><a href="{{$weeklyNew['url']}}">See more...</a></span>
